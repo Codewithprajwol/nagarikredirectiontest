@@ -15,6 +15,20 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/config-301",
+        destination: "/news",
+        statusCode: 301,
+      },
+      {
+        source: "/config-302",
+        destination: "/business",
+        statusCode: 302,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
